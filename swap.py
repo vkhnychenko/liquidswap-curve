@@ -162,7 +162,7 @@ class LiquidSwapCurve(ModuleBase):
             coin_x_decimals=coin_x_decimals,
             coin_y_decimals=coin_y_decimals
         )
-        logger.info('stable_pool_amount_in: {}', stable_pool_amount_in)
+        logger.debug('stable_pool_amount_in: {}', stable_pool_amount_in)
 
         if stable_pool_amount_in is None:
             return None
@@ -172,7 +172,7 @@ class LiquidSwapCurve(ModuleBase):
             coin_x_address=coin_x_address,
             coin_y_address=coin_y_address
         )
-        logger.info('uncorrelated_pool_amount_in: {}', uncorrelated_pool_amount_in)
+        logger.debug('uncorrelated_pool_amount_in: {}', uncorrelated_pool_amount_in)
 
         if uncorrelated_pool_amount_in is None:
             return None

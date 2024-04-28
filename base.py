@@ -67,7 +67,7 @@ class ModuleBase:
                 wallet_address,
                 f"0x1::coin::CoinStore<{token_address}>",
             )
-            logger.info(balance)
+            logger.debug(balance)
             return int(balance["data"]["coin"]["value"])
 
         except Exception as e:

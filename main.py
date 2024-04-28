@@ -12,7 +12,7 @@ from swap import LiquidSwapCurve
 async def main():
     coin_x = TokenBase('aptos', '0x1::aptos_coin::AptosCoin')
     coin_y = TokenBase('usdc', '0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDC')
-    account = Account(account_address=config.ACCOUNT_ADDRESS, private_key=config.PRIVATE_KEY)
+    account = Account.load_key(config.PRIVATE_KEY)
     module = LiquidSwapCurve(account, config.RPC_URL, coin_x=coin_x, coin_y=coin_y)
     await module.async_init()
 
